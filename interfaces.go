@@ -17,6 +17,7 @@ const (
 type DatadogClient interface {
 }
 
+// ListLogsGetOptionalParameters defines the query to execute against the service
 type ListLogsGetOptionalParameters struct {
 	FilterQuery        *string
 	FilterIndex        *string
@@ -27,6 +28,7 @@ type ListLogsGetOptionalParameters struct {
 	PageLimit          *int32
 }
 
+// LogsListResponse Response object with all logs matching the request and pagination information.
 type LogsListResponse struct {
 	// Array of logs matching the request.
 	Data  *[]Log                 `json:"data,omitempty"`
