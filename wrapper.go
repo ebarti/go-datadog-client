@@ -7,15 +7,6 @@ import (
 	_nethttp "net/http"
 )
 
-// LogsSort Sort parameters when querying logs.
-type LogsSort string
-
-// List of LogsSort
-const (
-	LOGSSORT_TIMESTAMP_ASCENDING  LogsSort = "timestamp"
-	LOGSSORT_TIMESTAMP_DESCENDING LogsSort = "-timestamp"
-)
-
 type DashboardListsAPI interface {
 	CreateDashboardListItems(ctx _context.Context, dashboardListId int64, body datadog.DashboardListAddItemsRequest) (datadog.DashboardListAddItemsResponse, *_nethttp.Response, error)
 	DeleteDashboardListItems(ctx _context.Context, dashboardListId int64, body datadog.DashboardListDeleteItemsRequest) (datadog.DashboardListDeleteItemsResponse, *_nethttp.Response, error)
